@@ -1,4 +1,24 @@
 /* styles.css */
+
+/* Подключение шрифта Tilda Sans */
+@font-face {
+    font-family: 'Tilda Sans';
+    src: url('assets/font/TildaSans-Medium/TildaSans-Medium.woff2') format('woff2'),
+         url('assets/font/TildaSans-Medium/TildaSans-Medium.woff') format('woff');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'Tilda Sans';
+    src: url('assets/font/TildaSans-ExtraBold/TildaSans-ExtraBold.woff2') format('woff2'),
+         url('sassets/font/TildaSans-ExtraBold/TildaSans-ExtraBold.woff') format('woff');
+    font-weight: 800; /* Extra Bold */
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --color-dark: #242424;
     --color-blue: #2134A0;
@@ -8,7 +28,8 @@
     --color-gray: #666666;
     --color-light-gray: #EEEEEE;
     
-    --font-main: 'Inter', sans-serif;
+    /* Заменяем Inter на Tilda Sans */
+    --font-main: 'Tilda Sans', sans-serif;
     
     --container-width: 1200px;
     --container-padding: 20px;
@@ -29,6 +50,7 @@ html {
 
 body {
     font-family: var(--font-main);
+    font-weight: 500; /* Medium для основного текста */
     color: var(--color-dark);
     line-height: 1.5;
     background-color: var(--color-white);
@@ -42,7 +64,7 @@ body {
 
 /* Типографика */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 800; /* Extra Bold для заголовков */
     line-height: 1.2;
 }
 
@@ -117,6 +139,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 50px;
     width: auto;
     border-radius: 4px;
+}
+
+.header__logo-img--large {
+    width: 200px;  
+    height: auto;
 }
 
 .nav__list {
